@@ -1,0 +1,10 @@
+# Expose your documentation as JSON swagger compliant
+app.swagger_ui:
+    path: /.eproxi/api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+app.swagger:
+    path: /.eproxi/api/doc.json
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger }
