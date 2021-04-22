@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commerce index{% endblock %}
+
+{% block body %}
+    <h1>Commerce index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Commercants</th>
+                <th>Email</th>
+                <th>Telephoe</th>
+                <th>Siren</th>
+                <th>Iban</th>
+                <th>Site</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commerce in commerces %}
+            <tr>
+                <td>{{ commerce.id }}</td>
+                <td>{{ commerce.commercants }}</td>
+                <td>{{ commerce.email }}</td>
+                <td>{{ commerce.telephoe }}</td>
+                <td>{{ commerce.siren }}</td>
+                <td>{{ commerce.iban }}</td>
+                <td>{{ commerce.site }}</td>
+                <td>
+                    <a href="{{ path('commerce_show', {'id': commerce.id}) }}">show</a>
+                    <a href="{{ path('commerce_edit', {'id': commerce.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('commerce_new') }}">Create new</a>
+{% endblock %}

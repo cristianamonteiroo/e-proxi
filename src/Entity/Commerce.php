@@ -2,11 +2,13 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\CommerceRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=CommerceRepository::class)
+ * @ApiResource
  */
 class Commerce
 {
@@ -30,12 +32,12 @@ class Commerce
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $téléphone;
+    private $telephoe;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $siran;
+    private $siren;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -76,26 +78,26 @@ class Commerce
         return $this;
     }
 
-    public function getTéléphone(): ?int
+    public function getTelephoe(): ?int
     {
-        return $this->téléphone;
+        return $this->telephoe;
     }
 
-    public function setTéléphone(?int $téléphone): self
+    public function setTelephoe(?int $telephoe): self
     {
-        $this->téléphone = $téléphone;
+        $this->telephoe = $telephoe;
 
         return $this;
     }
 
-    public function getSiran(): ?int
+    public function getSiren(): ?int
     {
-        return $this->siran;
+        return $this->siren;
     }
 
-    public function setSiran(?int $siran): self
+    public function setSiren(?int $siren): self
     {
-        $this->siran = $siran;
+        $this->siren = $siren;
 
         return $this;
     }

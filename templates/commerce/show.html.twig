@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commerce{% endblock %}
+
+{% block body %}
+    <h1>Commerce</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ commerce.id }}</td>
+            </tr>
+            <tr>
+                <th>Commercants</th>
+                <td>{{ commerce.commercants }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ commerce.email }}</td>
+            </tr>
+            <tr>
+                <th>Telephoe</th>
+                <td>{{ commerce.telephoe }}</td>
+            </tr>
+            <tr>
+                <th>Siren</th>
+                <td>{{ commerce.siren }}</td>
+            </tr>
+            <tr>
+                <th>Iban</th>
+                <td>{{ commerce.iban }}</td>
+            </tr>
+            <tr>
+                <th>Site</th>
+                <td>{{ commerce.site }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('commerce_index') }}">back to list</a>
+
+    <a href="{{ path('commerce_edit', {'id': commerce.id}) }}">edit</a>
+
+    {{ include('commerce/_delete_form.html.twig') }}
+{% endblock %}

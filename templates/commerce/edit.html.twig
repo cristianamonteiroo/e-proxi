@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Commerce{% endblock %}
+
+{% block body %}
+    <h1>Edit Commerce</h1>
+
+    {{ include('commerce/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('commerce_index') }}">back to list</a>
+
+    {{ include('commerce/_delete_form.html.twig') }}
+{% endblock %}
