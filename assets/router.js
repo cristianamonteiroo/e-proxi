@@ -19,7 +19,6 @@ const router = new Router({
         },
     ],
     mode: 'history',
-    base: '/.eproxi',
 });
 
 export default router;

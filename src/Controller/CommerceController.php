@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/eproxi")
+ * @Route("/commerce")
  */
 class CommerceController extends AbstractController
 {

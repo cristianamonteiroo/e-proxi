@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-    * @Route("/{vueRouting<.*>}", name="vueRouting")
+    * @Route("/home", name="vueRouting")
      */
     public function index()
     {

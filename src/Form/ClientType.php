@@ -2,29 +2,27 @@
 
 namespace App\Form;
 
-use App\Entity\Commerce;
+use App\Entity\Client;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CommerceType extends AbstractType
+class ClientType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('commercants')
+            ->add('client')
             ->add('email')
             ->add('telephone')
-            ->add('siren')
-            ->add('iban')
-            ->add('site')
+            ->add('adresse')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Commerce::class,
+            'data_class' => Client::class,
         ]);
     }
 }
